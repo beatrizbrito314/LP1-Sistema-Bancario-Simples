@@ -1,1 +1,1 @@
-# LP1-Sistema-Banc-rio-Simples
+# LP1-Sistema-Bancario-Simples
