@@ -13,34 +13,45 @@ void ContaBancaria::depositar(double valor){
     this->saldo+=valor;
 }
 void ContaBancaria::sacar(double valor){
-    this->saldo-=valor;
-    
+    if (this->saldo<valor){
+        cout<<"Saldo insuficiente."<<endl;
+    }else{
+        this->saldo-=valor;
+}
 }
 //sobrecarga de metodos para transferir
 void ContaBancaria::transferir(double valor, ContaBancaria &destino){
     if (this->saldo<valor){
         cout<<"Saldo insuficiente."<<endl;
     }else{
+
         destino.depositar(valor);
         this->saldo -= valor;
+
+        cout<<"Transferido: R$ "<<valor<<" da conta "<<this->numero
+        <<" para a conta "<<destino.numero<<endl;
     }
 }
 void ContaBancaria::transferir(double valor, ContaBancaria &destino1, ContaBancaria &destino2){
     if (this->saldo<valor){
         cout<<"Saldo insuficiente."<<endl;
     }else{
+
         destino1.depositar(valor/2);
         destino2.depositar(valor/2);
         this->saldo -= valor;
+
+        cout<<"Transferido: R$ "<<valor<<" para cada conta ("<<destino1.numero
+        <<" e "<<destino2.numero<<")"<<" da conta "<<this->numero<<endl;
     }
 }
 void ContaBancaria::exibirSaldo(){
-    cout<<"R$"<<this->saldo<<endl;
+    cout<<"Saldo atual da conta "<<this->numero<<": R$ "<<this->saldo<<endl;
 }
 void ContaBancaria::exibirInformacoes(){
-    cout << "Titular: " << titular.getName() << endl;
-    cout << "CPF: " << titular.getCpf() << endl;
-    cout << "Número da Conta: " << numero << endl;
-    exibirSaldo();
+    cout << "Titular: " << titular.getName()
+    <<", CPF: " << titular.getCpf()<< endl;
+    cout << "Número da Conta: " << numero 
+    <<", Saldo: R$ "<<saldo<<endl;
 
 };
