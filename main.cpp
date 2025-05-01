@@ -1,62 +1,9 @@
 #include <iostream>
 #include <string>
+#include "cliente.h"
+#include "contaBancaria.h"
+
 using namespace std;
-
-class Cliente{
-private:
-    string nome;
-    string cpf;
-public:
-//construtor para inicializar nome e cpf
-    Cliente(){};//construtor para usar na contaBancaria
-    Cliente(string nome, string cpf){
-        this->nome=nome;
-        this->cpf=cpf;
-    }
-    //acessar o nome
-    const::string& getName(){
-        return nome;
-
-    };
-    //acessar o cpf
-    const::string& getCpf(){
-        return nome;
-    }
-};
-class ContaBancaria{
-private:
-    int numero;
-    double saldo;
-    Cliente titular;
-public:
-//usando 0 para iniciar pois alguns clientes n passam saldo como parametro
-    ContaBancaria(int numero, Cliente titular, double saldo=0){
-        this->numero=numero;
-        this->titular=titular;
-        this->saldo=saldo;
-    }
-    void depositar(double valor){
-        double valorDeposito=valor;
-
-    }
-    void sacar(double valor){
-        double valorSacar=valor;
-        
-    }
-    //sobrecarga de metodos para transferir
-    void transferir(double valor, ContaBancaria &destino){
-    }
-    void transferir(double valor, ContaBancaria &destino1, ContaBancaria &destino2){
-        
-    }
-    void exibirSaldo(){
-
-    }
-    void exibirInformacoes(){
-
-    }
-
-};
 
 int main(){
     //criação dos clientes
