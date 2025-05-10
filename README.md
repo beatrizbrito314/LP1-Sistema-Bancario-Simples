@@ -5,12 +5,20 @@ Este é um programa desenvolvido em C++ Para a disciplina **Linguagem de Program
 
 - #### :file_folder: Estrutura do Projeto
 LP1-Sistema-Bancario-Simples/
+
 ├── cliente.cpp: Implementação da classe Cliente
+
 ├── cliente.h: Declaração da classe Cliente
-├── ContaBancaria.cpp: Implementação da classe ContaBancaria
+
+├── ContaBancaria.cpp: Implementação da classe 
+ContaBancaria
+
 ├── ContaBancaria.h: Declaração da classe ContaBancaria
+
 ├── main.cpp: Função principal
+
 ├── Makefile: Arquivo de compilação
+
 └── README.md: Documentação do projeto
 
 > :bulb: Utilize o "MakeFile" para gerar o arquivo executável.
