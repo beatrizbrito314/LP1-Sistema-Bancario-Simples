@@ -31,4 +31,12 @@ ContaBancaria
 - Exibe informações gerais dos clientes e suas contas.
 
 ### :computer: Uso
-### :sparkles: Autores
+#### 1. Clonar o repositório
+**No Git Bash:**
+git clone https://github.com/beatrizbrito314/LP1-Sistema-Bancario-Simples.git
+#### 2. Entre no diretório do projeto
+cd ~/LP1-Sistema-Bancario-Simples
+#### 3. Compile o projeto utilizando o makeFile
+make
+#### 4. Execute o programa
+./sistemaBancario
