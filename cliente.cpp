@@ -7,8 +7,8 @@ using namespace std;
  //construtor para inicializar nome e cpf
  Cliente::Cliente(){};//construtor para usar na contaBancaria
  Cliente::Cliente(string nome, string cpf){
-     this->nome=nome;
-     this->cpf=cpf;
+        this->nome=nome;
+        this->cpf=cpf;
  }
  //metodo para acessar o nome
  string Cliente::getName(){

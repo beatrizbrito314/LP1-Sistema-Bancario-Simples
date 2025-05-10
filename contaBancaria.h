@@ -1,13 +1,14 @@
 #ifndef CONTABANCARIA_H
 #define CONTABANCARIA_H
 #include "cliente.h"
-
+//estrutura da classe
 class ContaBancaria{
     private:
         int numero;
         double saldo;
         Cliente titular;
     public:
+        //assinatura dos métodos e construtores
         ContaBancaria(int numero, Cliente titular, double saldo=0);
         void depositar(double valor);
         void sacar(double valor);
