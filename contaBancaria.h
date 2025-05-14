@@ -9,7 +9,7 @@ class ContaBancaria{
         Cliente titular;
     public:
         //assinatura dos métodos e construtores
-        ContaBancaria(int numero, Cliente titular, double saldo=0);
+        ContaBancaria(int numero, Cliente titular, double saldo=0.0);
         void depositar(double valor);
         void sacar(double valor);
         void transferir(double valor, ContaBancaria &destino);
