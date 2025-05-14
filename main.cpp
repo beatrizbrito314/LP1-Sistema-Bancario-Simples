@@ -20,10 +20,10 @@ int main(){
     conta1.exibirSaldo();
 
     //Ana transfere R$ 200.0 para Bruno
-    conta1.transferir(200.0, conta2);
+    conta1.transferir(200000.0, conta2);
 
     //Ana transfere R$ 300.0 diviidos entre Bruno e Carla
-    conta1.transferir(300.0, conta2, conta3);
+    conta1.transferir(30000.0, conta2, conta3);
 
     //exibição dos saldos finais
     cout<<endl;

@@ -33,35 +33,41 @@ void ContaBancaria::depositar(double valor){
         this->saldo+=valor;
 }
 }
-
+//metodo para verificacao
+bool ContaBancaria::verificar(double valor){
+ if(valor<0.0){
+         cout<<"Informe um valor válido"<<endl;
+         return false;
+    }else if (this->saldo<valor){
+        cout<<"Saldo insuficiente."<<endl;
+        return false;
+    }else{
+        return true;
+}
+}
 //método para realizar saque
 void ContaBancaria::sacar(double valor){
-    if(valor<0.0){
-         cout<<"Informe um valor válido"<<endl;
-    }else{
-         if (this->saldo<valor){
-        cout<<"Saldo insuficiente."<<endl;
-    }else{
+    bool ver=verificar(valor);
+    if(ver==true){
         this->saldo-=valor;
+    }else{
+        saldo=saldo;
     }
     }
-}
+
 //sobrecarga de metodos para transferir
 void ContaBancaria::transferir(double valor, ContaBancaria &destino){
-    if (this->saldo<valor){
-        cout<<"Saldo insuficiente."<<endl;
-    }else{
-        destino.depositar(valor);
+    bool ver=verificar(valor);
+    if(ver==true){
         sacar(valor);
-
         cout<<"Transferido: R$ "<<valor<<" da conta "<<getNumero()
         <<" para a conta "<<destino.getNumero()<<endl;
     }
-}
+    }
 void ContaBancaria::transferir(double valor, ContaBancaria &destino1, ContaBancaria &destino2){
-    if (this->saldo<valor){
-        cout<<"Saldo insuficiente."<<endl;
-    }else{
+    bool ver=verificar(valor);
+    if(ver==true){
+        sacar(valor);
         destino1.depositar(valor/2);
         destino2.depositar(valor/2);
         sacar(valor);

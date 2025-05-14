@@ -13,6 +13,7 @@ class ContaBancaria{
         ~ContaBancaria();
         int getNumero();
         double getSaldo();
+        bool verificar(double valor);
         void depositar(double valor);
         void sacar(double valor);
         void transferir(double valor, ContaBancaria &destino);
