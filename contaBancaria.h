@@ -10,6 +10,9 @@ class ContaBancaria{
     public:
         //assinatura dos métodos e construtores
         ContaBancaria(int numero, Cliente titular, double saldo=0.0);
+        ~ContaBancaria();
+        int getNumero();
+        double getSaldo();
         void depositar(double valor);
         void sacar(double valor);
         void transferir(double valor, ContaBancaria &destino);

@@ -6,15 +6,20 @@ using namespace std;
 
 //construtor para usar na contaBancaria
  Cliente::Cliente(){};
+
  //construtor para inicializar nome e cpf
  Cliente::Cliente(string nome, string cpf){
         this->nome=nome;
         this->cpf=cpf;
  }
+//destrutor
+Cliente::~Cliente() {}
+
  //metodo para acessar o nome
  string Cliente::getName(){
      return nome;
  };
+
  //metodo para acessar o cpf
  string Cliente::getCpf(){
      return cpf;

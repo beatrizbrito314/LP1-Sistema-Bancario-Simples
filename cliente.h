@@ -10,6 +10,7 @@ class Cliente{
         //assinatura dos métodos e construtores
         Cliente();
         Cliente(std::string  nome, std::string  cpf);
+        ~Cliente();
         std::string  getName();
         std::string  getCpf();
     };
