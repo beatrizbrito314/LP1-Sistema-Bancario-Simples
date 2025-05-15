@@ -40,3 +40,6 @@ cd ~/LP1-Sistema-Bancario-Simples
 make
 #### 4. Execute o programa
 ./sistemaBancario
+### Outras informações
+Autor(a): Emilly Beatriz Andrade Brito
+Projeto desenvolvido para a disciplina de Linguagem de Programação I- IMD/UFRN
